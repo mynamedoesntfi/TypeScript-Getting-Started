@@ -1,21 +1,22 @@
-/// <reference path="player.ts" />
-/// <reference path="game.ts" />
+import { Player } from './player';
+import { Game } from './game';
+import * as Utility from './utility';
 
 let newGame: Game;
 
 //click handler for start game
-document.getElementById('startGame')!.addEventListener('click', () =>   {
-    const player: Player = new Player();
-    player.name = Utility.getInputValue('playername')
+document.getElementById('startGame')!.addEventListener('click', () => {
+	const player: Player = new Player();
+	player.name = Utility.getValue('playername');
 
-    const problemCount: number = Number(Utility.getInputValue("problemCount"))
-    const factor: number = Number(Utility.getInputValue("factor"))
+	const problemCount: number = Number(Utility.getValue('problemCount'));
+	const factor: number = Number(Utility.getValue('factor'));
 
-    newGame = new Game(player, problemCount, factor);
-    newGame.displayGame();
+	newGame = new Game(player, problemCount, factor);
+	newGame.displayGame();
 });
 
 //click handler for calc score
-document.getElementById('calculate')!.addEventListener('click', () =>   {
-    newGame.calculateScore();
+document.getElementById('calculate')!.addEventListener('click', () => {
+	newGame.calculateScore();
 });
