@@ -15,4 +15,3 @@ document.getElementById('startGame').addEventListener('click', function () {
 document.getElementById('calculate').addEventListener('click', function () {
     newGame.calculateScore();
 });
-//# sourceMappingURL=app.js.map

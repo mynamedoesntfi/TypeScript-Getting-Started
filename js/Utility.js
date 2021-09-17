@@ -10,4 +10,3 @@ function logger(message) {
     console.log(message);
 }
 exports.logger = logger;
-//# sourceMappingURL=utility.js.map

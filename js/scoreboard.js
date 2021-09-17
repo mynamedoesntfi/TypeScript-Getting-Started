@@ -17,7 +17,7 @@ var Scoreboard = (function () {
                 result.playerName +
                     ' : ' +
                     result.score +
-                    ' /' +
+                    ' / ' +
                     result.problemCount +
                     ' for factor ' +
                     result.factor;
@@ -29,4 +29,3 @@ var Scoreboard = (function () {
     return Scoreboard;
 }());
 exports.Scoreboard = Scoreboard;
-//# sourceMappingURL=scoreboard.js.map
