@@ -1,10 +1,14 @@
 import { Result } from './result';
+import * as _ from 'lodash';
+import { logger } from './utility';
 
 export class Scoreboard {
 	private results: Result[] = [];
 
 	addResult(newResult: Result): void {
 		this.results.push(newResult);
+		let allCapsName: string = _.upperCase(newResult.playerName);
+		logger(`${allCapsName} : ${newResult.score}`);
 	}
 
 	updateScoreboard(): void {
